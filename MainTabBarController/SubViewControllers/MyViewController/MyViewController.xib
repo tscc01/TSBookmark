@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
+            <connections>
+                <outlet property="segment" destination="tVU-1H-Jyp" id="tEA-A0-0U0"/>
+                <outlet property="tableView" destination="egF-Jf-V31" id="vDs-Go-SCE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVU-1H-Jyp" customClass="DZNSegmentedControl">
+                    <rect key="frame" x="0.0" y="64" width="600" height="35"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="rBy-k2-wiX"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onSegmentChanged:" destination="-1" eventType="valueChanged" id="nYd-Nc-oHF"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="egF-Jf-V31">
+                    <rect key="frame" x="0.0" y="99" width="600" height="501"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dZk-Fm-tNx"/>
+                        <outlet property="delegate" destination="-1" id="5oY-Wd-9D8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="egF-Jf-V31" firstAttribute="top" secondItem="tVU-1H-Jyp" secondAttribute="bottom" id="2vE-xf-PCp"/>
+                <constraint firstItem="egF-Jf-V31" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="35f-hV-PFP"/>
+                <constraint firstItem="tVU-1H-Jyp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5g9-up-1Lb"/>
+                <constraint firstItem="tVU-1H-Jyp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="9Co-RD-oMb"/>
+                <constraint firstAttribute="bottom" secondItem="egF-Jf-V31" secondAttribute="bottom" id="N4a-Jt-hmF"/>
+                <constraint firstItem="egF-Jf-V31" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XHD-9b-VYF"/>
+                <constraint firstAttribute="trailing" secondItem="egF-Jf-V31" secondAttribute="trailing" id="e4z-p2-air"/>
+                <constraint firstAttribute="trailing" secondItem="tVU-1H-Jyp" secondAttribute="trailing" id="qXM-8s-CsI"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XHD-9b-VYF"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,54 @@
+//
+//  InitializationManager.m
+//  TengNiu
+//
+//  Created by 李晓春 on 15/4/9.
+//  Copyright (c) 2015年 Teng Niu. All rights reserved.
+//
+
+#import "InitializationManager.h"
+#import <MobAPI/MobAPI.h>
+#import "ConstantVariables.h"
+#import "BookListDataModel.h"
+#import "TagListDataModel.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <UIKit/UIKit.h>
+#import "STUtilities.h"
+#import "iCloudHelper.h"
+
+
+@interface InitializationManager ()
+
+@end
+
+@implementation InitializationManager
+
++ (instancetype)sharedInstance {
+    static InitializationManager* instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [InitializationManager new];
+    });
+    
+    return instance;
+}
+
+- (void)initSystemComponentsWithOptions:(NSDictionary *)launchOptions
+{
+    [MobAPI registerApp:SHARE_SDK_MOB_API_APP_KEY];
+    
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
+    [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
+    [[IQKeyboardManager sharedManager] disableInViewControllerClass:[UIAlertView class]];
+    
+    [UIViewController replaceBackButton];
+    
+    [iCloudHelper sharedInstance];
+}
+
+
+- (void)registerRemoteNotification {
+    
+}
+
+@end

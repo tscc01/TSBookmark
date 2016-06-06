@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRecordDetailViewController">
+            <connections>
+                <outlet property="imgMark" destination="UIE-6a-L9t" id="h5n-23-OWG"/>
+                <outlet property="lcImageHeight" destination="MH2-SQ-s8H" id="f2L-jh-2x6"/>
+                <outlet property="textMark" destination="SFI-GP-OIW" id="iUM-u8-Sn5"/>
+                <outlet property="textPage" destination="9Oq-S9-aQe" id="Kve-KP-E4d"/>
+                <outlet property="view" destination="AYz-je-SYe" id="W0q-68-oQr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AYz-je-SYe">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本次阅读到第" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-yQ-IMG">
+                    <rect key="frame" x="15" y="79" width="102" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Oq-S9-aQe">
+                    <rect key="frame" x="122" y="74.5" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="QQG-y9-aWW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-cG-vBb">
+                    <rect key="frame" x="227" y="79" width="17" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-6a-L9t">
+                    <rect key="frame" x="15" y="115" width="100" height="100"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="MH2-SQ-s8H"/>
+                        <constraint firstAttribute="width" constant="100" id="aE2-f2-BZR"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="U9w-p6-vKq" appends="YES" id="TOr-xm-ZMM"/>
+                    </connections>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SFI-GP-OIW">
+                    <rect key="frame" x="15" y="251" width="570" height="334"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="读书笔记" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0w-TN-jhP">
+                    <rect key="frame" x="15" y="230" width="52" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SFI-GP-OIW" firstAttribute="top" secondItem="UIE-6a-L9t" secondAttribute="bottom" constant="15" id="1QG-sG-r5b"/>
+                <constraint firstItem="9Oq-S9-aQe" firstAttribute="leading" secondItem="h8e-yQ-IMG" secondAttribute="trailing" constant="5" id="2KJ-8U-fHZ"/>
+                <constraint firstItem="h8e-yQ-IMG" firstAttribute="leading" secondItem="AYz-je-SYe" secondAttribute="leading" constant="15" id="A7i-ft-7ud"/>
+                <constraint firstItem="UIE-6a-L9t" firstAttribute="top" secondItem="h8e-yQ-IMG" secondAttribute="bottom" constant="15" id="Brg-bs-Rmb"/>
+                <constraint firstAttribute="bottom" secondItem="SFI-GP-OIW" secondAttribute="bottom" constant="15" id="JII-ss-gLA"/>
+                <constraint firstItem="a0w-TN-jhP" firstAttribute="leading" secondItem="AYz-je-SYe" secondAttribute="leading" constant="15" id="K72-BT-gvd"/>
+                <constraint firstItem="SFI-GP-OIW" firstAttribute="leading" secondItem="AYz-je-SYe" secondAttribute="leading" constant="15" id="LhY-Qi-9pB"/>
+                <constraint firstItem="9Oq-S9-aQe" firstAttribute="centerY" secondItem="h8e-yQ-IMG" secondAttribute="centerY" id="M87-le-dZM"/>
+                <constraint firstItem="SFI-GP-OIW" firstAttribute="top" secondItem="a0w-TN-jhP" secondAttribute="bottom" constant="5" id="UhC-Ao-Gti"/>
+                <constraint firstItem="a0w-TN-jhP" firstAttribute="top" secondItem="UIE-6a-L9t" secondAttribute="bottom" constant="15" id="c1k-IM-tSt"/>
+                <constraint firstItem="UIE-6a-L9t" firstAttribute="leading" secondItem="AYz-je-SYe" secondAttribute="leading" constant="15" id="l1S-ri-xOH"/>
+                <constraint firstItem="WPE-cG-vBb" firstAttribute="leading" secondItem="9Oq-S9-aQe" secondAttribute="trailing" constant="5" id="ngL-bg-ynr"/>
+                <constraint firstAttribute="trailing" secondItem="SFI-GP-OIW" secondAttribute="trailing" constant="15" id="t0k-HS-Jgz"/>
+                <constraint firstItem="h8e-yQ-IMG" firstAttribute="top" secondItem="AYz-je-SYe" secondAttribute="top" constant="79" id="u8d-l4-r5c"/>
+                <constraint firstItem="WPE-cG-vBb" firstAttribute="centerY" secondItem="h8e-yQ-IMG" secondAttribute="centerY" id="yDJ-ub-4Sk"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1QG-sG-r5b"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="336" y="434"/>
+        </view>
+        <tapGestureRecognizer id="U9w-p6-vKq">
+            <connections>
+                <action selector="onImgTapped:" destination="-1" id="Yaj-SH-s0A"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
