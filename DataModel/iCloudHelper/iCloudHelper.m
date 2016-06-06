@@ -79,6 +79,11 @@ NSString *ICLOUD_DATE = @"ICLOUD_DATE";
 
 - (BOOL)isICloudOpen
 {
+    BOOL cloudIsAvailable = [[iCloud sharedCloud] checkCloudAvailability];
+    if (!cloudIsAvailable) {
+        return NO;
+    }
+    
     if (![[PersistentHelper sharedInstance]getNumberForKey:ICLOUD_OPEN]) {
         return YES;
     }
