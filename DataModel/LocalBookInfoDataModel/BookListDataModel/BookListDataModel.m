@@ -10,6 +10,7 @@
 #import <SDWebImage/SDWebImageManager.h>
 #import "TagListDataModel.h"
 #import "Base64.h"
+#import "iCloudHelper.h"
 
 @implementation BookListDataModel
 
@@ -47,7 +48,7 @@
     info.subTitle = dicInfo[@"subtitle"];
     info.imageUrl = dicInfo[@"image"];
     [info saveToDB];
-    [_arrayBooks addObject:info];
+    [_arrayBooks insertObject:info atIndex:0];
     
     [[SDWebImageManager sharedManager]downloadImageWithURL:[NSURL URLWithString:dicInfo[@"image"]] options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
         info.image = image;
@@ -62,6 +63,8 @@
         link.tag = dicTag[@"name"];
         [link saveToDB];
     }
+    
+    [[iCloudHelper sharedInstance]synchronize];
     
     return YES;
 }

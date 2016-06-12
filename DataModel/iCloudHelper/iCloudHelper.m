@@ -155,13 +155,14 @@ NSString *ICLOUD_DATE = @"ICLOUD_DATE";
             NSDate *dateICloud = artworkRecord[@"recordId"];
             NSDate *dateLocal = [[PersistentHelper sharedInstance]getDateForKey:ICLOUD_DATE];
             
-            if (!dateLocal || (![dateICloud isEqualToDate:dateICloud] && [dateICloud isLaterThanDate:dateLocal])) {
+            if (!dateLocal || (![dateLocal isEqualToDate:dateICloud] && [dateICloud isLaterThanDate:dateLocal])) {
                 [[iCloud sharedCloud] retrieveCloudDocumentWithName:@"LKDB.db" completion:^(UIDocument *cloudDocument, NSData *documentData, NSError *error) {
                     if (!error) {
                         NSString* dbpath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/LKDB/LKDB.db"];
                         NSData *fileData = documentData;
                         
                         [[NSFileManager defaultManager]createDirectoryAtPath:[dbpath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
+                        [[NSFileManager defaultManager]removeItemAtPath:dbpath error:nil];
                         [[NSFileManager defaultManager]createFileAtPath:dbpath contents:fileData attributes:nil];
                         [self finishSynchronize];
                     }

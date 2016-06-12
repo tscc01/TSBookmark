@@ -14,7 +14,21 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-5m-o9V">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fOm-5m-o9V" secondAttribute="bottom" id="Q4j-r3-4rU"/>
+                <constraint firstItem="fOm-5m-o9V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UkU-3f-bAZ"/>
+                <constraint firstItem="fOm-5m-o9V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XIk-rO-LQV"/>
+                <constraint firstAttribute="trailing" secondItem="fOm-5m-o9V" secondAttribute="trailing" id="qKl-cH-3Ey"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="launch" width="375" height="667"/>
+    </resources>
 </document>

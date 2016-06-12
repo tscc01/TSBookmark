@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.title = @"请扫码图书二维码";
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -45,6 +45,12 @@
     _viewHolder.layer.borderWidth = 1;
     _viewHolder.layer.borderColor = [UIColor blackColor].CGColor;
     [self.view bringSubviewToFront:_viewHolder];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        ScanResultViewController *viewController = [[ScanResultViewController alloc]initWithNibName:nil bundle:nil];
+        viewController.strIsbn = @"9787544253994";
+        [self.navigationController pushViewController:viewController animated:YES];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

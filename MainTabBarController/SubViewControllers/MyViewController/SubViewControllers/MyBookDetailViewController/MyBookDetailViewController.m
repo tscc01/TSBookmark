@@ -107,7 +107,7 @@
     }
     
     if (!_arrayCells.count) {
-        [self st_setViewControlerLoadingFinishedWithNoneDataWithViewEdgeInstets:UIEdgeInsetsMake(150, 0, 0, 0) message:@"没有任何阅读记录\r\n快去添加吧~~"];
+        [self st_setViewControlerLoadingFinishedWithNoneDataWithViewEdgeInstets:UIEdgeInsetsMake(214, 0, 0, 0) message:@"没有任何阅读记录\r\n快去添加吧~~"];
     }
 }
 

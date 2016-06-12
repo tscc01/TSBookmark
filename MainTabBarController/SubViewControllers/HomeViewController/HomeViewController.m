@@ -88,7 +88,7 @@
 - (void)initCells
 {
     if (!_bookInfo) {
-        [self st_setViewControlerLoadingFinishedWithNoneData:@"没有任何阅读记录\r\n快去添加吧~~"];
+        [self st_setViewControlerLoadingFinishedWithNoneData:@"没有任何阅读记录\r\n点击右上角按钮添加~~"];
         return;
     }
     
@@ -113,19 +113,31 @@
     }
     
     if (!_arrayCells.count) {
-        [self st_setViewControlerLoadingFinishedWithNoneDataWithViewEdgeInstets:UIEdgeInsetsMake(150, 0, 0, 0) message:@"没有任何阅读记录\r\n快去添加吧~~"];
+        [self st_setViewControlerLoadingFinishedWithNoneDataWithViewEdgeInstets:UIEdgeInsetsMake(214, 0, 0, 0) message:@"没有任何阅读记录\r\n快去添加吧~~"];
     }
 }
 
 - (void)resetCells
 {
+    BookInfo *infoTemp = _bookInfo;
+    
     NSArray *array = [BookListDataModel sharedInstance].arrayBooks;
     if (array.count) {
         _bookInfo = array[0];
     }
     _dataModel.bookInfo = _bookInfo;
     
-    if (_arrayCells.count != [_dataModel.dicDetail[@"Marks"] count]) {
+    if (_bookInfo && ![_bookInfo.isbn isEqualToString:infoTemp.isbn]) {
+        _viewHeader.labelTitle.text = _bookInfo.title;
+        if (_bookInfo.image) {
+            _viewHeader.imgInfo.image = _bookInfo.image;
+        }
+        else {
+            [_viewHeader.imgInfo sd_setImageWithURL:[NSURL URLWithString:_bookInfo.imageUrl]];
+        }
+    }
+    
+    if ((_bookInfo && ![_bookInfo.isbn isEqualToString:infoTemp.isbn]) || (_arrayCells.count != [_dataModel.dicDetail[@"Marks"] count])) {
         [self initCells];
         [_tableView reloadData];
         [self st_setViewControlerLoadingSuccess];

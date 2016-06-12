@@ -9,6 +9,7 @@
 #import "AddBookRecordViewConroller.h"
 #import "LocalBookInfoDataModel.h"
 #import "ImageDetailViewController.h"
+#import "iCloudHelper.h"
 
 @interface AddBookRecordViewConroller () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -86,6 +87,8 @@
     info.date = [NSDate date];
     [info saveToDB];
     
+    [[iCloudHelper sharedInstance]synchronize];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 

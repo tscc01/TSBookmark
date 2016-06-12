@@ -8,6 +8,7 @@
 
 #import "TagListDataModel.h"
 #import "LocalBookInfoDataModel.h"
+#import "iCloudHelper.h"
 
 @implementation TagListDataModel
 
@@ -45,6 +46,8 @@
     [info saveToDB];
     
     [_arrayTags addObject:info];
+    
+    [[iCloudHelper sharedInstance]synchronize];
 }
 
 @end

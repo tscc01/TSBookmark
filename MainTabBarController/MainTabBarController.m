@@ -44,16 +44,23 @@
     HomeViewController *vcHome = [[HomeViewController alloc]initWithNibName:nil bundle:nil];
     vcHome.title = @"首页";
     UINavigationController *navHome = [[UINavigationController alloc]initWithRootViewController:vcHome];
+    navHome.navigationBar.tintColor = [UIColor colorWithHexValue:@"00cc99"];
+    navHome.tabBarItem.image = [UIImage imageNamed:@"home"];
     
     MyViewController *vcMy = [[MyViewController alloc]initWithNibName:nil bundle:nil];
     vcMy.title = @"我的";
     UINavigationController *navMy = [[UINavigationController alloc]initWithRootViewController:vcMy];
+    navMy.navigationBar.tintColor = [UIColor colorWithHexValue:@"00cc99"];
+    navMy.tabBarItem.image = [UIImage imageNamed:@"account"];
     
     SettingViewController *vcSetting = [[SettingViewController alloc]initWithNibName:nil bundle:nil];
     vcSetting.title = @"设置";
     UINavigationController *navSetting = [[UINavigationController alloc]initWithRootViewController:vcSetting];
+    navSetting.navigationBar.tintColor = [UIColor colorWithHexValue:@"00cc99"];
+    navSetting.tabBarItem.image = [UIImage imageNamed:@"setting"];
 
     self.viewControllers = [NSMutableArray arrayWithObjects:navHome, navMy, navSetting, nil];
+    self.tabBar.tintColor = [UIColor colorWithHexValue:@"00cc99"];
 }
 
 @end

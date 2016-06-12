@@ -77,6 +77,7 @@ enum {
         BOOL cloudIsAvailable = [[iCloud sharedCloud] checkCloudAvailability];
         if (!cloudIsAvailable) {
             [[[UIAlertView alloc]initWithTitle:@"iCloud不可用" message:@"iCloud同步处于不可用状态，请确认您开启了iCloud功能并且已经登录。\r\n请在设置 -> iCloud中查看" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil]show];
+            switchButton.on = NO;
             return;
         }
         [[iCloudHelper sharedInstance]setICloudOpen:YES];

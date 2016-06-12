@@ -41,7 +41,9 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6a-nd-bPT">
                     <rect key="frame" x="15" y="134.5" width="120" height="30"/>
-                    <state key="normal" title="直接拍照进行记录"/>
+                    <state key="normal" title="直接拍照进行记录">
+                        <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="onButtonPhotoClicked:" destination="-1" eventType="touchUpInside" id="Jvc-DY-rUl"/>
                     </connections>
