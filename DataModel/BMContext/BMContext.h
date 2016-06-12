@@ -13,7 +13,6 @@
 
 + (instancetype)sharedInstance;
 
-@property (strong, nonatomic) NSMutableDictionary *dicUserInfo;
 @property (strong, nonatomic) MainTabBarController *vcMain;
 
 @end

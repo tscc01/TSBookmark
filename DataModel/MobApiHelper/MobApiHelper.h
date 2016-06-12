@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MobAPI/MobAPI.h>
 
 @interface MobApiHelper : NSObject
 

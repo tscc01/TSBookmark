@@ -7,7 +7,6 @@
 //
 
 #import "InitializationManager.h"
-#import <MobAPI/MobAPI.h>
 #import "ConstantVariables.h"
 #import "BookListDataModel.h"
 #import "TagListDataModel.h"
@@ -34,9 +33,7 @@
 }
 
 - (void)initSystemComponentsWithOptions:(NSDictionary *)launchOptions
-{
-    [MobAPI registerApp:SHARE_SDK_MOB_API_APP_KEY];
-    
+{    
     [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
     [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
     [[IQKeyboardManager sharedManager] disableInViewControllerClass:[UIAlertView class]];

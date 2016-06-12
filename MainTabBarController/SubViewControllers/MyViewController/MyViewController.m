@@ -7,7 +7,6 @@
 //
 
 #import "MyViewController.h"
-#import <MobAPI/MobAPI.h>
 #import "JSONKit.h"
 #import "Base64.h"
 #import "ConstantVariables.h"
