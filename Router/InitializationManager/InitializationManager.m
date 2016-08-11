@@ -14,6 +14,7 @@
 #import <UIKit/UIKit.h>
 #import "STUtilities.h"
 #import "iCloudHelper.h"
+#import <STSafeCategory/STSafeCategory.h>
 
 
 @interface InitializationManager ()
@@ -41,6 +42,8 @@
     [UIViewController replaceBackButton];
     
     [iCloudHelper sharedInstance];
+    
+    [[STSafeCategory sharedInstance]enableSafeCategory];
 }
 
 

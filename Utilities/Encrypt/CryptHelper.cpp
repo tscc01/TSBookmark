@@ -11,11 +11,11 @@
 using namespace std;
 
 CryptHelper::CryptHelper() {
-    key = "31c1d42965c893942be9e44033eaf370";
+    key = "3213231231232323123";
 #ifdef DEBUG
-    httpKey = "111111";
+    httpKey = "3213";
 #else
-    httpKey = "11";
+    httpKey = "32123";
 #endif
 }
 
