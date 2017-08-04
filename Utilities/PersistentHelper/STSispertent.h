@@ -1,9 +1,9 @@
 //
 //  STSispertent.h
-//  TengNiu
+//  HaoYa
 //
 //  Created by 李晓春 on 16/5/25.
-//  Copyright © 2016年 Teng Niu. All rights reserved.
+//  Copyright © 2016年 HaoYa. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

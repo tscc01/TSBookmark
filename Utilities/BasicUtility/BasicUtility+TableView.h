@@ -1,9 +1,9 @@
 //
 //  BasicUtility+TableView.h
-//  TengNiu
+//  HaoYa
 //
 //  Created by YangNan on 15/4/20.
-//  Copyright (c) 2015年 Teng Niu. All rights reserved.
+//  Copyright (c) 2015年 HaoYa. All rights reserved.
 //
 
 #import "BasicUtility.h"

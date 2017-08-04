@@ -1,9 +1,9 @@
 //
 //  HUDProgressView.h
-//  TengNiu
+//  HaoYa
 //
 //  Created by 李晓春 on 15/10/30.
-//  Copyright © 2015年 Teng Niu. All rights reserved.
+//  Copyright © 2015年 HaoYa. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

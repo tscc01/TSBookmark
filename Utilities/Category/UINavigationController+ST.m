@@ -1,9 +1,9 @@
 //
 //  UINavigationController+ST.m
-//  TengNiu
+//  HaoYa
 //
 //  Created by YangNan on 15/5/27.
-//  Copyright (c) 2015年 Teng Niu. All rights reserved.
+//  Copyright (c) 2015年 HaoYa. All rights reserved.
 //
 
 #import "UINavigationController+ST.h"

@@ -1,9 +1,9 @@
 //
-//  NSObject+TengNiu.m
-//  TengNiu
+//  NSObject+HaoYa.m
+//  HaoYa
 //
 //  Created by YangNan on 15/3/20.
-//  Copyright (c) 2015年 Teng Niu. All rights reserved.
+//  Copyright (c) 2015年 HaoYa. All rights reserved.
 //
 
 #import "NSObject+ST.h"

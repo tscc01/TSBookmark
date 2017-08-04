@@ -1,14 +1,14 @@
 //
 //  SplashViewErrorFactory.m
-//  TengNiu
+//  HaoYa
 //
 //  Created by YangNan on 15/4/21.
-//  Copyright (c) 2015年 Teng Niu. All rights reserved.
+//  Copyright (c) 2015年 HaoYa. All rights reserved.
 //
 
 #import "SplashViewErrorFactory.h"
 
-const NSString* TNSplashErrorDomain = @"com.tengniu.error.splash";
+const NSString* TNSplashErrorDomain = @"com.HaoYa.error.splash";
 const NSString* TNSplashErrorTitleKey = @"TNSplashErrorTitleKey";
 const NSString* TNSplashErrorSubtitleKey = @"TNSplashErrorSubtitleKey";
 const NSString* TNSplashErrorButtonNormalTitleKey = @"TNSplashErrorButtonNormalTitleKey";
